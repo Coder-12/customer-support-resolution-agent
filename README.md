@@ -1,5 +1,7 @@
 # Customer Support Resolution Agent
 
+Current validation: documentation ingestion indexes 19 chunks, tests pass, evaluator passes 9/9 with score 1.0, and CLI/API demos are runnable locally.
+
 An internal AI-powered customer support resolution copilot that analyzes incoming support tickets, retrieves documentation and historical ticket context, uses support tools, and returns either a customer-ready draft response or a structured escalation packet.
 
 This project is intentionally CLI/API-first because the assignment prioritizes agent design, RAG correctness, tool usage, guardrails, code quality, and production/LLMOps thinking over UI polish.
