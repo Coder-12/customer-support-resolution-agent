@@ -1,0 +1,9 @@
+[project]
+name = "customer-support-resolution-agent"
+version = "0.1.0"
+description = "Internal customer support resolution copilot with RAG, tools, guardrails, and evaluation."
+requires-python = ">=3.10"
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]

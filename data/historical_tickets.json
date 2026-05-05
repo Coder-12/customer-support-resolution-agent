@@ -1,0 +1,92 @@
+[
+  {
+    "ticket_id": "TCK-1001",
+    "subject": "Refund approved but customer has not received funds",
+    "description": "Customer says refund was approved 8 business days ago but funds are not visible.",
+    "issue_type": "billing_refund",
+    "product_area": "billing",
+    "resolution": "Confirmed order refund status, explained 5 to 10 business day bank processing timeline, and asked customer to contact support again if funds were missing after the window.",
+    "tags": ["refund", "billing", "delay"]
+  },
+  {
+    "ticket_id": "TCK-1002",
+    "subject": "Refund missing after 15 business days",
+    "description": "Refund was approved more than 10 business days ago and processor status was unavailable.",
+    "issue_type": "billing_refund",
+    "product_area": "billing",
+    "resolution": "Escalated to Billing Operations with order ID, refund approval timestamp, and customer payment method.",
+    "tags": ["refund", "escalation", "processor"]
+  },
+  {
+    "ticket_id": "TCK-1003",
+    "subject": "Unable to log in after password reset",
+    "description": "Customer reset password but still receives session expired message.",
+    "issue_type": "login_issue",
+    "product_area": "auth",
+    "resolution": "Reviewed auth logs, identified AUTH_TOKEN_EXPIRED, and advised full sign-out, cache clear, and retry in incognito window.",
+    "tags": ["login", "auth", "token"]
+  },
+  {
+    "ticket_id": "TCK-1004",
+    "subject": "Tracking number has not updated",
+    "description": "Customer says tracking has not moved for two days after fulfillment.",
+    "issue_type": "shipping_delay",
+    "product_area": "shipping",
+    "resolution": "Explained that tracking can take up to 48 hours to update after carrier handoff and advised follow-up if no movement after that period.",
+    "tags": ["shipping", "tracking", "carrier"]
+  },
+  {
+    "ticket_id": "TCK-1005",
+    "subject": "Cancel subscription and refund request",
+    "description": "Customer wants to cancel subscription and asks for refund on current billing period.",
+    "issue_type": "subscription_cancellation",
+    "product_area": "subscriptions",
+    "resolution": "Confirmed cancellation prevents future renewal and routed refund eligibility through refund policy review.",
+    "tags": ["subscription", "cancel", "refund"]
+  },
+  {
+    "ticket_id": "TCK-1006",
+    "subject": "Payment failed but customer sees pending bank charge",
+    "description": "Customer payment failed but bank shows pending authorization.",
+    "issue_type": "payment_failure",
+    "product_area": "billing",
+    "resolution": "Explained failed payments may leave temporary authorization holds and escalated when payment logs showed processor timeout.",
+    "tags": ["payment", "processor", "authorization"]
+  },
+  {
+    "ticket_id": "TCK-1007",
+    "subject": "Account locked after MFA attempts",
+    "description": "Customer is locked out after repeated MFA verification failures.",
+    "issue_type": "login_issue",
+    "product_area": "auth",
+    "resolution": "Escalated to Identity Engineering because repeated MFA failures required account security review.",
+    "tags": ["login", "mfa", "locked"]
+  },
+  {
+    "ticket_id": "TCK-1008",
+    "subject": "Package delayed with carrier exception",
+    "description": "Carrier status reports exception and delivery is beyond expected date.",
+    "issue_type": "shipping_delay",
+    "product_area": "shipping",
+    "resolution": "Escalated to Logistics with order ID, carrier status, tracking number, and customer address verification.",
+    "tags": ["shipping", "carrier_exception", "escalation"]
+  },
+  {
+    "ticket_id": "TCK-1009",
+    "subject": "Duplicate charge after subscription renewal",
+    "description": "Customer sees two charges for one renewal period.",
+    "issue_type": "billing_duplicate_charge",
+    "product_area": "billing",
+    "resolution": "Escalated to Billing Operations with payment IDs and subscription ID because duplicate charges require transaction review.",
+    "tags": ["billing", "duplicate", "subscription"]
+  },
+  {
+    "ticket_id": "TCK-1010",
+    "subject": "Cannot update card details",
+    "description": "Customer receives an address verification error when updating payment method.",
+    "issue_type": "payment_failure",
+    "product_area": "billing",
+    "resolution": "Asked customer to verify billing address and retry. Escalated when logs showed repeated AVS mismatch despite correct address.",
+    "tags": ["payment", "avs", "billing_address"]
+  }
+]

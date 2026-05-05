@@ -1,0 +1,6 @@
+[
+  {"account_id": "ACCT-1001", "customer_id": "CUS-3", "recent_errors": ["PAYMENT_PROCESSOR_DECLINED"], "last_seen": "2026-05-05T08:30:00Z"},
+  {"account_id": "ACCT-1002", "customer_id": "CUS-6", "recent_errors": ["AUTH_TOKEN_EXPIRED"], "last_seen": "2026-05-05T09:15:00Z"},
+  {"account_id": "ACCT-1003", "customer_id": "CUS-7", "recent_errors": ["MFA_FAILURE", "MFA_FAILURE", "ACCOUNT_LOCKED"], "last_seen": "2026-05-05T09:40:00Z"},
+  {"account_id": "ACCT-1004", "customer_id": "CUS-8", "recent_errors": [], "last_seen": "2026-05-04T11:00:00Z"}
+]

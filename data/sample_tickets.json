@@ -1,0 +1,9 @@
+[
+  {"subject": "Refund approved but not received", "description": "My refund was approved 12 days ago but I still have not received the money.", "customer_id": "CUS-1", "order_id": "ORD-1001"},
+  {"subject": "Cannot log in", "description": "I reset my password but the app keeps saying my session expired.", "customer_id": "CUS-6", "account_id": "ACCT-1002"},
+  {"subject": "Tracking not moving", "description": "My package tracking has not updated since yesterday.", "customer_id": "CUS-2", "order_id": "ORD-1002"},
+  {"subject": "Refund still missing", "description": "My approved refund has not arrived and it has been more than 10 business days.", "customer_id": "CUS-5", "order_id": "ORD-1005"},
+  {"subject": "Card declined", "description": "My payment failed but I see a pending bank charge.", "customer_id": "CUS-3", "order_id": "ORD-1003", "account_id": "ACCT-1001"},
+  {"subject": "Charged twice for renewal", "description": "I see two charges for one subscription renewal.", "customer_id": "CUS-DUP-1", "order_id": "ORD-9999"},
+  {"subject": "Something is broken", "description": "Nothing works and I need help now."}
+]

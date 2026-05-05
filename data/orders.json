@@ -1,0 +1,7 @@
+[
+  {"order_id": "ORD-1001", "customer_id": "CUS-1", "status": "refund_pending", "product_area": "billing", "refund_status": "approved", "refund_approved_at": "2026-04-24", "processor_status": "submitted_to_bank"},
+  {"order_id": "ORD-1002", "customer_id": "CUS-2", "status": "shipped", "product_area": "shipping", "tracking_status": "carrier_handoff_pending", "tracking_last_update": "2026-05-04"},
+  {"order_id": "ORD-1003", "customer_id": "CUS-3", "status": "payment_failed", "product_area": "billing", "payment_status": "processor_declined", "processor_code": "INSUFFICIENT_FUNDS"},
+  {"order_id": "ORD-1004", "customer_id": "CUS-4", "status": "delivered", "product_area": "shipping", "tracking_status": "delivered", "tracking_last_update": "2026-05-02"},
+  {"order_id": "ORD-1005", "customer_id": "CUS-5", "status": "refund_exception", "product_area": "billing", "refund_status": "approved", "refund_approved_at": "2026-04-10", "processor_status": "unknown"}
+]

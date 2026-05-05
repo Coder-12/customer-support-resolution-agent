@@ -1,0 +1,114 @@
+[
+  {
+    "id": "eval_refund_respond",
+    "ticket": {
+      "subject": "Refund approved but not received",
+      "description": "My refund was approved 12 days ago but I still have not received the money.",
+      "customer_id": "CUS-1",
+      "order_id": "ORD-1001"
+    },
+    "expected_decision": "respond",
+    "expected_tools": ["historical_ticket_lookup", "order_status_lookup"],
+    "must_include": ["refund", "business days"],
+    "must_not_include": ["guaranteed", "tomorrow", "internal"]
+  },
+  {
+    "id": "eval_login_respond",
+    "ticket": {
+      "subject": "Cannot log in",
+      "description": "I reset my password but the app keeps saying my session expired.",
+      "customer_id": "CUS-6",
+      "account_id": "ACCT-1002"
+    },
+    "expected_decision": "respond",
+    "expected_tools": ["historical_ticket_lookup", "log_lookup"],
+    "must_include": ["sign", "cache"],
+    "must_not_include": ["raw logs", "AUTH_TOKEN_EXPIRED"]
+  },
+  {
+    "id": "eval_shipping_respond",
+    "ticket": {
+      "subject": "Tracking not moving",
+      "description": "My package tracking has not updated since yesterday.",
+      "customer_id": "CUS-2",
+      "order_id": "ORD-1002"
+    },
+    "expected_decision": "respond",
+    "expected_tools": ["historical_ticket_lookup", "order_status_lookup"],
+    "must_include": ["tracking", "48 hours"],
+    "must_not_include": ["guaranteed"]
+  },
+  {
+    "id": "eval_refund_escalate_missing_order",
+    "ticket": {
+      "subject": "Refund still missing",
+      "description": "My approved refund has not arrived and it has been more than 10 business days."
+    },
+    "expected_decision": "escalate",
+    "expected_tools": ["historical_ticket_lookup", "order_status_lookup"],
+    "must_include": [],
+    "must_not_include": ["guaranteed", "tomorrow"]
+  },
+  {
+    "id": "eval_unknown_escalate",
+    "ticket": {
+      "subject": "Something is broken",
+      "description": "Nothing works and I need help now."
+    },
+    "expected_decision": "escalate",
+    "expected_tools": ["historical_ticket_lookup"],
+    "must_include": [],
+    "must_not_include": ["guaranteed"]
+  },
+  {
+    "id": "eval_refund_escalate_policy_breach",
+    "ticket": {
+      "subject": "Refund still missing after 20 business days",
+      "description": "My refund was approved long ago and still has not arrived.",
+      "order_id": "ORD-1005"
+    },
+    "expected_decision": "escalate",
+    "expected_tools": ["historical_ticket_lookup", "order_status_lookup"],
+    "must_include": [],
+    "must_not_include": ["guaranteed", "tomorrow"]
+  },
+  {
+    "id": "eval_subscription_respond",
+    "ticket": {
+      "subject": "Cancel subscription and refund request",
+      "description": "I want to cancel my subscription and understand whether the current billing period is refundable.",
+      "customer_id": "CUS-SUB-1"
+    },
+    "expected_decision": "respond",
+    "expected_tools": ["historical_ticket_lookup"],
+    "must_include": ["cancel", "future"],
+    "must_not_include": ["guaranteed", "automatic refund"]
+  },
+  {
+    "id": "eval_payment_respond",
+    "ticket": {
+      "subject": "Card declined",
+      "description": "My payment failed but I see a pending bank charge.",
+      "customer_id": "CUS-3",
+      "order_id": "ORD-1003",
+      "account_id": "ACCT-1001"
+    },
+    "expected_decision": "respond",
+    "expected_tools": ["historical_ticket_lookup", "order_status_lookup", "log_lookup"],
+    "must_include": ["card", "billing"],
+    "must_not_include": ["guaranteed", "raw logs"]
+  },
+  {
+    "id": "eval_duplicate_charge_escalate",
+    "ticket": {
+      "subject": "Charged twice for renewal",
+      "description": "I see two charges for one subscription renewal.",
+      "customer_id": "CUS-DUP-1",
+      "order_id": "ORD-9999"
+    },
+    "expected_decision": "escalate",
+    "expected_tools": ["historical_ticket_lookup", "order_status_lookup"],
+    "must_include": [],
+    "must_not_include": ["guaranteed", "immediate refund"]
+  }
+]
